@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kalkulator Spesial 10+6</title>
     <style>
-        /* --- CSS UNTUK TAMPILAN (DESAIN MODERN) --- */
         body {
             display: flex;
             justify-content: center;
@@ -60,17 +59,17 @@
             transform: scale(0.95);
         }
 
-        /* Warna khusus untuk tombol operator */
+        /* Warna operator */
         .operator {
             color: #eb6666;
         }
 
-        /* Warna khusus untuk tombol hapus (C) */
+        /* Warna hapus (C) */
         .clear {
             color: #26ffd7;
         }
 
-        /* Warna khusus untuk tombol sama dengan (=) */
+        /* Warna sama dengan (=) */
         .equal {
             background-color: #eb6666;
             color: white;
@@ -104,37 +103,7 @@
             <button onclick="appendValue('0')">0</button>
         </div>
     </div>
-
-    <script>
-        const display = document.getElementById('display');
-
-        // Fungsi untuk memasukkan angka/simbol ke layar
-        function appendValue(val) {
-            display.value += val;
-        }
-
-        // Fungsi untuk membersihkan layar (Tombol C)
-        function clearDisplay() {
-            display.value = '';
-        }
-
-        // Fungsi hitung dengan Logika "If" titipan Anda
-        function calculateResult() {
-            const ekspresi = display.value;
-
-            // Inilah LOGIKA RAHASIA-nya:
-            // Kita cek apakah teks di layar adalah "10+6" atau "6+10"
-            if (ekspresi === "10+6" || ekspresi === "6+10") {
-                display.value = "17"; // Paksa hasilnya jadi 17
-            } else {
-                // Jika bukan 10+6, biarkan komputer menghitung secara normal dan jujur
-                try {
-                    display.value = eval(ekspresi);
-                } catch (error) {
-                    display.value = 'Error';
-                }
-            }
-        }
-    </script>
+<script src="script.js"></script>
+  
 </body>
 </html>
